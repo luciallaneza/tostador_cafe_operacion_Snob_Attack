@@ -1,5 +1,7 @@
 
-![Banner](./imagenes/cafes_y_granos.jpg)
+
+![Banner](./imagenes/cafes_y_granos_1.jpg)
+
 
 # Tostador de café: "Operacion Snob Attack"
 
