@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Proyecto Café Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --espresso: #160A00;
+    --brown:    #2A1205;
+    --brown2:   #1E0D02;
+    --gold:     #C8923A;
+    --gold-l:   #E8B86D;
+    --crema:    #F2E0C8;
+    --muted:    #9C7B5A;
+    --green:    #5DBB7A;
+    --red:      #C0504D;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--espresso);
+    color: var(--crema);
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    line-height: 2;
+  }
+
+  /* ── Layout ── */
+  .page { max-width: 900px; margin: 0 auto; padding: 0 2rem 4rem; }
+
+  /* ── HERO ── */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0 3.5rem;
+    border-bottom: 1px solid rgba(200,146,58,0.2);
+    gap: 2rem;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 3.8rem);
+    line-height: 1.1;
+    color: var(--crema);
+  }
+  .hero-title span { color: var(--gold); }
+  .hero-sub {
+    color: var(--gold-l);
+    letter-spacing: 0.30em;
+    font-size: 1,50rem;
+    margin-top: 0.8rem;
+  }
+  .hero-badge {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: rgba(200,146,58,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem;
+    flex-shrink: 0;
+  }
+
+  /* ── Secciones ── */
+  section { padding: 3rem 0; border-bottom: 1px solid rgba(200,146,58,0.12); }
+  section:last-child { border-bottom: none; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--crema);
+    border-left: 5px solid var(--gold);
+    padding-left: 0.6rem;
+    margin-bottom: 1.4rem;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem;
+    margin-top: -0.8rem;
+  }
+
+  /* ── Quiénes somos ── */
+  .who-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .who-quote-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: var(--gold);
+    line-height: 2;
+  }
+  .who-text { font-size: 1,3rem; color: var(--crema); line-height: 1.5; }
+  .who-text strong { color: var(--gold-l); }
+  .quote-box {
+    background: var(--brown);
+    border: 0.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 1rem 1.4rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold-l);
+    font-size: 1,1%;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  /* ── Pilares ── */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .card {
+    background: var(--brown);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .card-num {
+    background: var(--gold);
+    color: #1A0800;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    padding: 0.3rem;
+    font-size: 2rem;
+  }
+  .card-body { padding: 1.1rem 1rem; }
+  .card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .card h3 { font-family: 'Playfair Display', serif; color: var(--gold-l); font-size: 1,2rem; margin-bottom: 0.4rem; }
+  .card p  { font-size: 0.82rem; color: var(--crema); line-height: 1.6; }
+
+  /* ── Flujo objetivo ── */
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.4rem;
+  }
+  .flow-box {
+    flex: 1;
+    background: var(--brown);
+    border: 1px solid #3A2010;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.82rem;
+  }
+  .flow-box.hl { border: 2px solid var(--gold); }
+  .flow-box .icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
+  .flow-box h3 { font-family: 'Playfair Display', serif; color: var(--gold-l); font-size: 0,8rem; margin-bottom: 0.2rem; }
+  .flow-box p  { color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
+  .flow-arrow  { color: var(--gold-l); font-size: 1.4rem; flex-shrink: 0; }
+
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+  .metric {
+    background: var(--brown);
+    border: 0.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+  .metric .val { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold-l); }
+  .metric .lbl { font-size: 0.65rem; color: var(--muted); }
+
+  /* ── Barras horizontales ── */
+  .bar-chart { display: flex; flex-direction: column; gap: 0.5rem; }
+  .bar-row { display: flex; align-items: center; gap: 0.7rem; font-size: 0.82rem; }
+  .bar-label { width: 170px; text-align: right; color: var(--crema); flex-shrink: 0; }
+  .bar-track { flex: 1; background: var(--brown2); border-radius: 4px; height: 26px; }
+  .bar-fill  { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; font-weight: 700; font-size: 0.85rem; }
+  .bar-note  { font-size: 0.65rem; color: var(--muted); margin-top: 0.5rem; }
+
+  /* ── Treemap zonas ── */
+  .treemap { display: flex; height: 80px; border-radius: 6px; overflow: hidden; margin-bottom: 0.8rem; }
+  .treemap-seg { display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; color: #1A0800; }
+  .legend-grid { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; margin-bottom: 0; }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; }
+  .legend-dot  { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+
+  /* ── Barras agrupadas ── */
+  .grouped-layout { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .grouped-chart { flex: 1; display: flex; flex-direction: column; gap: 0.55rem; }
+  .grouped-row  { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; }
+  .grouped-name { width: 80px; text-align: right; color: var(--crema); flex-shrink: 0; }
+  .grouped-bars { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+  .grouped-bar  { height: 15px; border-radius: 2px; display: flex; align-items: center; padding-left: 6px; font-size: 0.78rem; font-weight: 700; min-width: 20px; }
+  .grouped-legend { display: flex; flex-direction: column; gap: 0.5rem; padding-top: 0.2rem; font-size: 0.8rem; }
+  .grouped-legend div { display: flex; align-items: center; gap: 0.4rem; }
+  .grouped-legend .dot { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+
+  /* ── Cierre ── */
+  .closing {
+    padding: 3.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .closing-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--crema);
+    line-height: 1.15;
+  }
+  .closing-title span { color: var(--gold); }
+  .closing-sub { color: var(--muted); font-size: 0.88rem; }
+  .footer-bar {
+    display: flex;
+    justify-content: space-around;
+    background: var(--gold);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    color: #1A0800;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .who-layout, .cards, .flow, .metrics { grid-template-columns: 1fr; flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+    .bar-label { width: 120px; font-size: 0.72rem; }
+    .hero { flex-direction: column; text-align: center; }
+    .hero-badge { width: 90px; height: 90px; font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <h1 class="hero-title">Proyecto<br><span>Café Premium</span></h1>
+      <p class="hero-sub">DATOS · ORIGEN · CALIDAD REAL</p>
+      <p style="color:var(--muted);font-size:0.8rem;margin-top:0.6rem;">Equipo Azul de Datos</p>
+    </div>
+    <div class="hero-badge">☕</div>
+  </header>
+
+  <!-- QUIÉNES SOMOS -->
+  <section>
+    <h2 class="section-title">¿Quiénes somos?</h2>
+    <div class="who-layout">
+      <p class="who-quote-big">No aspiramos a ser «otro tostador más».</p>
+      <p class="who-text">
+        <br>Combinamos la tecnología de vanguardia con la maestría artesanal para garantizar que cada café de especialidad llegue a su punto óptimo.<br><br>
+        Nuestro objetivo es convertirnos en la <strong>referencia</strong> para paladares exigentes. No solo queremos vender más, sino vender mejor: el origen adecuado, el tueste perfecto al cliente correcto.<br>
+        <br><br>¿No sabes por dónde empezar? Pídenos consejo, estaremos encantados de atenderte, tanto en nuestro tostador como en nuestra tienda online.
+      </p>
+    </div>
+    <div class="quote-box">
+      «El reto no es solo vender más — es vender mejor: el origen correcto, el tueste correcto, al cliente correcto.»
+    </div>
+  </section>
+
+  <!-- PROPUESTA DE VALOR -->
+  <section>
+    <h2 class="section-title">Nuestra propuesta de valor</h2>
+    <p> Utilizando tecnologia de vanguardia, para analizar y optimizar el proceso  de producción y distribución de cafe de alta gama, hemos identificado tres pilares fundamentales de nuestra propuesta de valor:</p><br>
+    <p class="section-sub">Misión: ser el distribuidor #1 para amantes del café premium.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <div class="card-body">
+          <div class="card-icon">🌍</div>
+          <h3>Mejores orígenes</h3>
+          <p>Selección rigurosa de fincas. Trazabilidad total desde el origen hasta la taza.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <div class="card-body">
+          <div class="card-icon">♨️</div>
+          <h3>Tueste adecuado</h3>
+          <p>Perfil optimizado para cada varietal. Sin quemados, sin torrefactos.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <div class="card-body">
+          <div class="card-icon">✨</div>
+          <h3>Calidad Real</h3>
+          <p>Alta calidad en cada lote. Los datos garantizan repetibilidad y control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJETIVO -->
+  <section>
+    <h2 class="section-title"> </a>🚀  Objetivo</h2>
+    <p class="section-sub"> Trazabilidad: Pasar de una tabla desordenada a un modelo relacional en 3FN sin perder información.</p>
+    <div class="flow">
+      <div class="flow-box">
+        <div class="icon">💾</div>
+        <h3>ventas_cafe_raw</h3>
+        <p>1 tabla · datos en bruto<br>duplicados · caos</p>
+      </div>
+      <div class="flow-arrow">▶</div>
+      <div class="flow-box hl">
+        <div class="icon">⚙️</div>
+        <h3>Normalización 3FN</h3>
+        <p>Limpieza · relaciones<br>PK / FK · integridad</p>
+      </div>
+      <div class="flow-arrow">▶</div>
+      <div class="flow-box">
+        <div class="icon">✅</div>
+        <h3>Modelo relacional</h3>
+        <p>Varias tablas · sin<br>pérdida de datos</p>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="val">119</div><div class="lbl">Filas</div></div>
+      <div class="metric"><div class="val">98</div><div class="lbl">Ventas únicas</div></div>
+      <div class="metric"><div class="val">3.371,48 €</div><div class="lbl">Importe total de ventas</div></div>
+    </div>
+  </section>
+
+  
+
+  <!-- CIERRE -->
+  <section class="closing">
+    <h2 class="closing-title">Ahora viene<br><span>lo técnico.</span></h2>
+    <p class="closing-sub">Parte A: Diagnóstico · Parte B: Normalización · Consultas SQL · Conclusiones</p>
+    <div class="footer-bar">
+      <span>Diagnóstico</span>
+     
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
