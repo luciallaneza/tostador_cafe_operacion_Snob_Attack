@@ -13,7 +13,9 @@ No queremos ser "otro cafe mas": queremos ser la referencia absoluta para gente 
 
 Y si hace falta una referencia de exigencia: nuestra profe, [Anaïs](https://github.com/Anais-RV), que no soporta torrefactos ni cafés con notas a quemado.
 
-Misión: convertirnos en el distribuidor número 1 para amantes del café premium y destronar el "siempre lo mismo" con datos, estrategia y calidad real.
+Equipo de coders: 
+
+<u>Misión:</u> convertirnos en el distribuidor número 1 para amantes del café premium y destronar el "siempre lo mismo" con datos, estrategia y calidad real.
 
 El reto no es solo vender más.
 El reto es vender mejor: el origen correcto, el tueste correcto, al cliente correcto.
