@@ -8,12 +8,12 @@
 
 ## Contexto (la historia)
 
-Somos el equipo de datos de una marca de cafe de especialidad que quiere romper el mercado.
-No queremos ser "otro cafe mas": queremos ser la referencia absoluta para gente exigente que ya no soporta el cafe plano de cadenas masivas.
+Somos el equipo de datos de una marca de café de especialidad que quiere romper el mercado.
+No queremos ser "otro café más": queremos ser la referencia absoluta para gente exigente que ya no soporta el cafe plano de cadenas masivas.
 
 Y si hace falta una referencia de exigencia: nuestra profe, [Anaïs](https://github.com/Anais-RV), que no soporta torrefactos ni cafés con notas a quemado.
 
-Equipo de coders: 
+Equipo de coders de este sacrificado tostador: 
 
 <u>Misión:</u> convertirnos en el distribuidor número 1 para amantes del café premium y destronar el "siempre lo mismo" con datos, estrategia y calidad real.
 
