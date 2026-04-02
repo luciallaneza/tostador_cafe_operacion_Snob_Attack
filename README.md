@@ -8,25 +8,34 @@
 
 ## Contexto (la historia)
 
-Somos el equipo de datos de una marca de café de especialidad que quiere romper el mercado.
+Somos el equipo de analistas de datos de una marca de café de especialidad que quiere romper el mercado.
 No queremos ser "otro café más": queremos ser la referencia absoluta para gente exigente que ya no soporta el cafe plano de cadenas masivas.
 
 Y si hace falta una referencia de exigencia: nuestra profe, [Anaïs](https://github.com/Anais-RV), que no soporta torrefactos ni cafés con notas a quemado.
 
-Equipo de coders de este sacrificado tostador: 
+Equipo de coders de este tostador que persigue la excelencia: [Alain](https://github.com/Alain-coder1), [Arantxa](https://github.com/ArantxaPuig), [Carolina](https://github.com/KrolinaTF), [Fran](https://github.com/FranDiazBusto), [Cisco](https://github.com/fcoxjp-art), [Graciela](https://github.com/Graceila82), [Lucía L.](https://github.com/luciallaneza), [Lucía P.](https://github.com/lucypelaez), [Michelle](https://github.com/michelleolivares86-tech), [Oksana](https://github.com/ksu727096-maker) y [Sara](https://github.com/Sara89359).
 
-<u>Misión:</u> convertirnos en el distribuidor número 1 para amantes del café premium y destronar el "siempre lo mismo" con datos, estrategia y calidad real.
+Stack tecnlógico que hemos utilizado:   
+![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+
+**<ins>Misión:</ins>** convertirnos en el distribuidor número 1 para amantes del café premium y destronar el "siempre lo mismo" con datos, estrategia y calidad real.
 
 El reto no es solo vender más.
 El reto es vender mejor: el origen correcto, el tueste correcto, al cliente correcto.
 
-Nuestra propuesta de valor:
+**<ins>Nuestra propuesta de valor:</ins>**
 
 1. mejores orígenes,
 2. tostado más adecuado para cada café,
 3. calidad alta y consistente.
 
-Problema: los datos vienen en bruto y con caos.
+**<ins>Problema:</ins>** los datos vienen en bruto y con caos.
 Si el modelo es malo, tomaremos decisiones malas y perderemos ventaja frente a la competencia.
 
 ## Objetivo del reto
@@ -48,7 +57,7 @@ El punto de partida ya viene en la tabla `ventas_cafe_raw` dentro de `tostador-c
 
 1. `TOSTADOR-CAFE-RAW-RETO.sql` (tabla desnormalizada + datos).
 2. `tostador-cafe-raw.db` (la misma info, lista para abrir en DB Browser).
-3. Esta guia de reto.
+3. Esta guía de reto.
 
 ## Mini glosario (por si ayuda)
 
