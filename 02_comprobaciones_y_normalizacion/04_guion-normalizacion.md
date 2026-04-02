@@ -1,12 +1,11 @@
 ## Resumen explicativo de nuestra normalización ☕ 📜
 
-La tabla original Café RAW contenía información mezclada: datos de clientes, cafés, zonas, ventas, cantidades, valoraciones… todo en una sola estructura.
+La tabla original ventas_cafe_raw contenía información mezclada: datos de clientes, cafés, zonas, ventas, cantidades, valoraciones… todo en una sola estructura.
 Esto generaba redundancia, inconsistencias y dificultaba el análisis.
 Para solucionarlo, aplicamos un proceso de normalización siguiendo las reglas de 1FN, 2FN y 3FN.
 
-+ Pasos del proceso. 
-
-Lo primero fue separar la información en tablas maestras, tablas de eventos y tablas pivot:
+### Pasos del proceso 
+╰┈➤ Lo primero fue separar la información en tablas maestras, tablas de eventos y tablas pivot:
 
 
 1º Identificar las tablas maestras que contienen la información estática.
@@ -26,10 +25,10 @@ Estas tablas almacenan información que no depende de ninguna venta.
 
 4º Relacionar Ventas con Café para almacenar la opiniones y valoraciones de los Clientes.
 
-Las tablas Pivot te permiten relaciones complejas sin duplicar información.
+Las tablas Pivot nos permiten relaciones complejas sin duplicar información.
 
 
-+ ¿Por qué nuestra normalización es correcta?:
+### ¿Por qué nuestra normalización es correcta?  ⍰
 
 - Evita duplicidades:
 Antes, los datos del cliente o del café se repetían en cada fila. Ahora están centralizados.
@@ -47,9 +46,9 @@ Si mañana añades nuevos cafés, zonas o valoraciones, no rompes nada.
 *Es el resultado de una consulta
 
 
-+ Conclusión:
-
-La normalización transformó una tabla RAW desordenada en un modelo relacional claro, eficiente y preparado para análisis avanzados.
+### Conclusión: ⬇️
+ 
+╰┈➤ La normalización transformó una tabla RAW desordenada en un modelo relacional claro, eficiente y preparado para análisis avanzados.
 Gracias a esta estructura, todas las consultas posteriores (KPIs, rankings, ventas por zona, etc.) se pueden realizar de forma rápida y sin inconsistencias.
 
 
