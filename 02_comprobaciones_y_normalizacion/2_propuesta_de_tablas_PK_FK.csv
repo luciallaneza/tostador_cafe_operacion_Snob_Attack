@@ -1,0 +1,41 @@
+Tabla Clientes,,
+Id_cliente,PK,Clave foranea
+nombre_cliente,,
+email_cliente,,
+Id_zona,FK,Clave foranea
+,,
+Tabla Cafe,,
+Id_cafe,PK,clave foranea
+nombre_cafe,,
+origen_cafe,,
+proceso_cafe,,
+nivel_tueste,,
+,,
+,,
+Tabla Zona,,
+Id_zona,PK,Clave foranea
+nombre_zona,,
+,,
+,,
+Tabla Ventas,,
+Id_venta,PK,clave foranea
+fecha_venta,,
+canal_venta,,
+Id_cliente,FK,clave foranea
+,,
+,,
+Tabla Detalle Venta,,
+Id_venta,PK,clave foranea
+Id_cafe,PK,clave foranea
+formato_paquete,,
+precio_unitario,,
+cantidad,,
+total_venta,,
+,,
+,,
+Tabla Valoraciones,,
+Id.cliente,PK,clave foranea
+Id_venta,PK,clave foranea
+Id_cafe,PK,clave foranea
+valoracion,,
+comentario_valoracion,,

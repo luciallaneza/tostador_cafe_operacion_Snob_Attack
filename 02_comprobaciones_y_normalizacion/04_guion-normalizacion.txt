@@ -1,0 +1,55 @@
+Resumen explicativo de la normalización:
+
+La tabla original Café RAW contenía información mezclada: datos de clientes, cafés, zonas, ventas, cantidades, valoraciones… todo en una sola estructura.
+Esto generaba redundancia, inconsistencias y dificultaba el análisis.
+Para solucionarlo, aplicamos un proceso de normalización siguiendo las reglas de 1FN, 2FN y 3FN.
+
++ Pasos del proceso. 
+
+Lo primero fue separar la información en tablas maestras, tablas de eventos y tablas pivot:
+
+
+1º Identificar las tablas maestras que contienen la información estática.
+
+- Cliente -> datos propios del cliente.
+
+- Café -> características del producto.
+
+- Zona -> ubicación del cliente.
+
+Estas tablas almacenan información que no depende de ninguna venta.
+
+
+2º Crear la tabla principal de evento llamada Ventas que recoge las operaciones comerciales e incluye los registros de cuándo y cómo se realizo la venta y quién la hizo.
+
+3º Relacionar Ventas con Café mediante una tabla Pivot, porque una venta puede incluir varios cafés y un café puede aparecer en muchas ventas.
+
+4º Relacionar Ventas con Café para almacenar la opiniones y valoraciones de los Clientes.
+
+Las tablas Pivot te permiten relaciones complejas sin duplicar información.
+
+
++ ¿Por qué nuestra normalización es correcta?:
+
+- Evita duplicidades:
+Antes, los datos del cliente o del café se repetían en cada fila. Ahora están centralizados.
+- Aísla la información por temática:
+Datos de clientes, productos, zonas y ventas están separados y limpios.
+- Facilita el análisis:
+Podemos calcular KPIs  como ticket medio, top clientes, cafés más vendidos, etc.
+- Cumple 3FN:
+Cada tabla contiene atributos que dependen únicamente de su clave primaria.
+- Permite escalabilidad y trazabilidad:
+Si mañana añades nuevos cafés, zonas o valoraciones, no rompes nada.
+
+
+(KPI: Key Performance Indicator / Indicador Clave de Rendimiento)
+*Es el resultado de una consulta
+
+
++ Conclusión:
+
+La normalización transformó una tabla RAW desordenada en un modelo relacional claro, eficiente y preparado para análisis avanzados.
+Gracias a esta estructura, todas las consultas posteriores (KPIs, rankings, ventas por zona, etc.) se pueden realizar de forma rápida y sin inconsistencias.
+
+
