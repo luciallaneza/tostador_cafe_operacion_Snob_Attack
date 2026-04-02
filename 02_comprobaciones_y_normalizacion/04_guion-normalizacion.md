@@ -1,4 +1,4 @@
-Resumen explicativo de la normalización:
+## Resumen explicativo de nuestra normalización ☕ 📜
 
 La tabla original Café RAW contenía información mezclada: datos de clientes, cafés, zonas, ventas, cantidades, valoraciones… todo en una sola estructura.
 Esto generaba redundancia, inconsistencias y dificultaba el análisis.
